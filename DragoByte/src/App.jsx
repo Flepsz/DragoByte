@@ -1,11 +1,11 @@
 import React from 'react'
-import NavBar from './components/NavBar/NavBar.jsx'
+import Header from './components/Header/Header.jsx'
 import {EmblaCarousel} from './components/Carousel/EmblaCarousel.jsx'
 
 function App() {
   return (
     <div>
-      <NavBar />
+      <Header />
       <EmblaCarousel />
     </div>
   )

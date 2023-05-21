@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Logo from "./dragobyte-logo.png";
 import "./NavBar.css";
+import SearchBar from "../SearchBar/SearchBar";
 
 function NavBar() {
     const [active, setActive] = useState("nav__menu");
@@ -38,6 +39,7 @@ function NavBar() {
                     </a>
                 </li>
             </ul>
+            <SearchBar />
             <div onClick={navToggle} className={toggleIcon}>
                 <div className="line1"></div>
                 <div className="line2"></div>

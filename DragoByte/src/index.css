@@ -13,3 +13,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.container {
+  max-width: 120vh;
+  margin: 0 auto;
+}

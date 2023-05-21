@@ -31,10 +31,8 @@ a:hover {
 .nav {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 7vh;
-    background: #f6f6f6;
-    border-bottom: 5px solid #580e78;
 }
 
 .nav__brand {
@@ -48,8 +46,8 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 5rem;
-    padding-inline-start: 0px;
+    gap: 10vh;
+    padding-inline-start: 15vh;
 }
 
 .nav__toggler div {
