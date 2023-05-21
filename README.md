@@ -1,6 +1,10 @@
-# DragoByte - README
+# DragoByte
 
-Este é o repositório do projeto DragoByte, um site de comércio eletrônico fictício para venda de peças de computador. O objetivo deste projeto é fornecer uma base para estudo e prática de desenvolvimento web utilizando React.
+Bem-vindo ao repositório do DragoByte, um projeto de estudo para criar um site de comércio eletrônico de peças de computador usando Vite com React.
+
+## Descrição do Projeto
+
+DragoByte é um website fictício que tem como objetivo oferecer uma experiência de compra online para entusiastas e profissionais de tecnologia. O site permite aos usuários navegar e adquirir peças de computador avançadas e inovadoras.
 
 ## Funcionalidades Principais
 
@@ -13,26 +17,60 @@ Este é o repositório do projeto DragoByte, um site de comércio eletrônico fi
 
 ## Tecnologias Utilizadas
 
-- React: Utilizado para criar a estrutura e a lógica do site.
-- React Router: Roteamento de páginas.
-- CSS: Estilização das páginas.
-- API Fictícia: Utilizada para simular interações com o servidor.
+- Vite
+- React
+- HTML
+- CSS
+- JavaScript<br><br>
 
-## Como Executar o Projeto
+# Como Executar o Projeto
+## Instalação
 
-1. Certifique-se de ter o Node.js instalado em seu computador.
-2. Clone este repositório em sua máquina local.
-3. No diretório raiz do projeto, abra o terminal e execute o comando `npm install` para instalar as dependências necessárias.
-4. Após a conclusão da instalação, execute o comando `npm run dev` para iniciar o servidor de desenvolvimento.
-5. Acesse o site em seu navegador através do endereço `http://localhost:5173`.
+1. Clone este repositório para sua máquina local utilizando o seguinte comando:
+
+```
+git clone https://github.com/seu-usuario/dragobyte.git
+```
+
+2. Acesse o diretório do projeto:
+
+```
+cd dragobyte
+```
+
+3. Instale as dependências necessárias:
+
+```
+npm install
+```
+
+## Executando o Projeto
+
+Após a conclusão da instalação, você pode executar o projeto utilizando o seguinte comando:
+
+```
+npm run dev
+```
+
+Isso iniciará o servidor de desenvolvimento e você poderá acessar o site através do seguinte endereço:
+
+```
+http://localhost:5173
+```
 
 ## Contribuições
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues relatando problemas, sugestões ou para submeter pull requests com melhorias ou novas funcionalidades.
+Contribuições são bem-vindas! Se você encontrar algum problema ou tiver sugestões de melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
 
 ## Agradecimentos
 
-Agradecemos a todos os desenvolvedores e entusiastas que contribuíram para tornar este projeto possível. Esperamos que este projeto seja útil para o aprendizado e prática de desenvolvimento web com React.
+Agradecemos a todos os desenvolvedores e comunidades de código aberto que tornaram possível a criação deste projeto.
+
+Esperamos que você encontre este projeto útil e informativo. Se tiver alguma dúvida, entre em contato conosco.
 
 Divirta-se explorando o DragoByte!
 
