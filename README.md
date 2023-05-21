@@ -1,4 +1,4 @@
-# DragoByte
+# DragoByte (EM DESENVOLVIMENTO)
 
 Bem-vindo ao repositório do DragoByte, um projeto de estudo para criar um site de comércio eletrônico de peças de computador usando Vite com React.
 
