@@ -1,0 +1,7 @@
+.line {
+    width: 90%;
+    height: 0.1rem;
+    margin: 2rem auto 2rem auto;
+    background: #580e78;
+    border-radius: 10px;
+}
