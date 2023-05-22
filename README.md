@@ -29,13 +29,13 @@ DragoByte é um website fictício que tem como objetivo oferecer uma experiênci
 1. Clone este repositório para sua máquina local utilizando o seguinte comando:
 
 ```
-git clone https://github.com/seu-usuario/dragobyte.git
+git clone https://github.com/Flepsz/DragoByte.git
 ```
 
 2. Acesse o diretório do projeto:
 
 ```
-cd dragobyte
+cd DragoByte
 ```
 
 3. Instale as dependências necessárias:
