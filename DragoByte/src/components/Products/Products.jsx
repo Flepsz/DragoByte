@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
+import "./Products.css";
+
+import ProductCard from "../ProductCard/ProductCard";
 import fetchProducts from "../../api/fetchProducts"
 
-import "./Products.css";
-import ProductCard from "../ProductCard/ProductCard";
 
 function Products() {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetchProducts('iphone').then((response) => {
+        fetchProducts('processador').then((response) => {
             setProducts(response)
             console.log(products);
         })
@@ -17,7 +18,9 @@ function Products() {
 
     return (
         <section className="products__container">
-            <ProductCard />
+            {
+                products.map((product) => <ProductCard key={products.id} data={product} />)
+            }
         </section>
     );
 }

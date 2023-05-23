@@ -1,5 +1,5 @@
 .cart__button {
-    font-size: 1.3rem;
+    font-size: 2.5vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,6 +9,7 @@
     cursor: pointer;
     position: relative;
     margin-left: 0.3vh;
+    padding-top: 0.2vh;
 }
 
 .cart__button:hover {
@@ -17,13 +18,13 @@
 
 .cart-status {
     background-color: #580e78;
-    width: 15px;
-    height: 15px;
+    width: 1.5vh;
+    height: 1.5vh;
     position: absolute;
     top: 0;
     left: 0;
     color: white;
-    font-size: 11px;
+    font-size: 1vh;
     font-weight: 600;
     border-radius: 15px;
     display: flex;
