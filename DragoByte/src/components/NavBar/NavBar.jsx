@@ -17,6 +17,7 @@ function NavBar() {
             : setToggleIcon("nav__toggler");
     };
 
+
     return (
         <nav className="nav">
             <a href="/" className="nav__brand">

@@ -34,8 +34,18 @@
     margin: auto;
 }
 
-@media screen (max-width: 768px) {
-    
+@media screen and (max-width: 450px) {
+    .embla__slide {
+        flex: 0 0 auto;
+    }
+
+    .embla__slide__img {
+        height: 170vh;
+        text-align: center;
+        width: 150vh;
+        object-fit: cover;
+        margin: auto;
+    }
 }
 
 
