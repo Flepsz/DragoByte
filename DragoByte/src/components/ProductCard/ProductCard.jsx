@@ -4,18 +4,18 @@ import "./ProductCard.css"
 
 function ProductCard({ data }) {
 
-    const { title, thumbnail, price} = data;
+    const { title, thumbnail, price, attributes} = data;
 
     return (
         <section className='product__card'>
-
             <div className="card__header">
                 <div className="card-off">
                     <div className="percent">33%</div>
                     <div className="off">OFF</div>
                 </div>
                 <div className="card-brand">
-                    <div className="name-brand">uu</div>
+                    
+                    <div className="name-brand">{attributes[1].value_name}</div>
                 </div>
             </div>
 

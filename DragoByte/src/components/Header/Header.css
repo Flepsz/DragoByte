@@ -1,4 +1,5 @@
 .header {
     background: #f6f6f6;
     border-bottom: 5px solid #580e78;
+    z-index: 1;
 }

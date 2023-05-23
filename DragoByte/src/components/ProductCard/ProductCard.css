@@ -43,7 +43,6 @@
 }
 
 .button__add-cart {
-    display: none;
     padding: 0.56vh;
     border-radius: 7px;
     border: 1px solid #313131;
@@ -57,10 +56,6 @@
     color: #fff;
     text-align: center;
     cursor: pointer;
-}
-
-.product__card:hover .button__add-cart {
-    display: flex;
 }
 
 .button__add-cart:hover {
