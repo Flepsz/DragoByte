@@ -1,10 +1,15 @@
+<p justify-content="center">
+  
 # DragoByte (EM DESENVOLVIMENTO)
-
+![](./screenshots/logo.png)
+  
 Bem-vindo ao repositório do DragoByte, um projeto de estudo para criar um site de comércio eletrônico de peças de computador usando Vite com React.
 
 ## Descrição do Projeto
 
 DragoByte é um website fictício que tem como objetivo oferecer uma experiência de compra online para entusiastas e profissionais de tecnologia. O site permite aos usuários navegar e adquirir peças de computador avançadas e inovadoras.
+
+![](./screenshots/main-page-example.png)
 
 ## Funcionalidades Principais
 
@@ -75,3 +80,4 @@ Esperamos que você encontre este projeto útil e informativo. Se tiver alguma d
 Divirta-se explorando o DragoByte!
 
 Equipe DragoByte
+</p>
