@@ -4,13 +4,18 @@ import "./ProductCard.css"
 
 function ProductCard({ data }) {
 
-    const { title, thumbnail, price, attributes} = data;
+    function desconto() {
+        return Math.floor(Math.random() * (50 - 1) ) + 1;
+    }
+
+
+    const { title, thumbnail, price, attributes } = data;
 
     return (
         <section className='product__card'>
             <div className="card__header">
                 <div className="card-off">
-                    <div className="percent">33%</div>
+                    <div className="percent">{desconto()}%</div>
                     <div className="off">OFF</div>
                 </div>
                 <div className="card-brand">

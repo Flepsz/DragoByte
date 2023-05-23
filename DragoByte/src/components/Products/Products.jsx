@@ -9,9 +9,9 @@ function Products() {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetchProducts('placa mae b550').then((response) => {
+        fetchProducts('Placa mãe b550').then((response) => {
             setProducts(response)
-            console.log(products);
+            // console.log(products);
         })
     }, [])
 
