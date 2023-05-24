@@ -1,5 +1,5 @@
 .products__container {
-    padding: 3vh 20px 50px;
+    padding: 3vh 20px;
     max-width: 90rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

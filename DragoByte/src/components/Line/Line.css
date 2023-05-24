@@ -1,4 +1,4 @@
-.line {
+.full__line {
     width: 90%;
     height: 0.1rem;
     margin: 2rem auto 2rem auto;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (max-width: 450px) {
-    .line {
+    .full__line {
         margin: 0.7rem auto 0.7rem auto;
     }
 }
