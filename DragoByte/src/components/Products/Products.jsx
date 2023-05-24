@@ -7,20 +7,23 @@ import fetchProducts from "../../api/fetchProducts"
 
 function Products() {
     const [products, setProducts] = useState([])
+    const [searchProducts, setSearchProducts] = useState('placa mãe b550')
+
+    // const setSearch = (value_search) => {
+    //     setSearchProducts(value_search)
+    // }
 
     useEffect(() => {
-        fetchProducts('Placa mae b550').then((response) => {
+        fetchProducts(searchProducts).then((response) => {
             setProducts(response)
-            // console.log(products);
+            console.log(products);
         })
     }, [])
 
 
     return (
         <section className="products__container">
-            {
-                products.map((product) => <ProductCard key={products.id} data={product} />)
-            }
+            {products.map((product) => <ProductCard key={products.id} data={product} />)}
         </section>
     );
 }

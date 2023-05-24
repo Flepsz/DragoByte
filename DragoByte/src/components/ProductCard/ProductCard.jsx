@@ -1,6 +1,7 @@
 import React from 'react'
 import propTypes from 'prop-types';
 import "./ProductCard.css"
+import formatCurrency from '../../utils/formatCurrency';
 
 function ProductCard({ data }) {
 
@@ -29,7 +30,7 @@ function ProductCard({ data }) {
 
             <div className="card__infos">
                 <h2 className='card__title'>{title}</h2>
-                <h2 className='card__price'>{price.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}</h2>
+                <h2 className='card__price'>{formatCurrency(price, 'BRL')}</h2>
             </div>
             <button type='button' className='button__add-cart'>COMPRAR</button>
         </section>
