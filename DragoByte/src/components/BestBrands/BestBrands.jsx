@@ -13,41 +13,48 @@ import Asrock from './img/Asrock.png'
 import Coolerm from './img/Coolerm.png'
 import MSI from './img/MSI.png'
 import './BestBrands.css'
+import 'swiper/swiper.css'
 
 function BestBrands() {
     return (
         <section>
             <Line />
             <p className="title__brands">MELHORES MARCAS</p>
-            <Swiper className='swiper_container'>
-                <SwiperSlide className='slide_item'>
+            <Swiper
+            spaceBetween={2}
+            slidesPerView={6}
+            loop={true}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+            className='swiper_container'>
+                <SwiperSlide className='item__swiper-slide'>
                     <img src={AMD} alt="AMD" />
                 </SwiperSlide>
-                <SwiperSlide className='slide_item'>
+                <SwiperSlide className='item__swiper-slide'>
                     <img src={Intel} alt="Intel" />
                 </SwiperSlide>
-                <SwiperSlide className='slide_item'>
+                <SwiperSlide className='item__swiper-slide'>
                     <img src={Asus} alt="Asus" />
                 </SwiperSlide>
-                <SwiperSlide className='slide_item'>
+                <SwiperSlide className='item__swiper-slide'>
                     <img src={Aorus} alt="Aorus" />
                 </SwiperSlide>
-                <SwiperSlide className='slide_item'>
+                <SwiperSlide className='item__swiper-slide'>
                     <img src={Hyperx} alt="Hyperx" />
                 </SwiperSlide>
-                <SwiperSlide className='slide_item'>
+                <SwiperSlide className='item__swiper-slide'>
                     <img src={Corsair} alt="Corsair" />
                 </SwiperSlide>
-                <SwiperSlide className='slide_item'>
+                <SwiperSlide className='item__swiper-slide'>
                     <img src={Nvidia} alt="Nvidia" />
                 </SwiperSlide>
-                <SwiperSlide className='slide_item'>
+                <SwiperSlide className='item__swiper-slide'>
                     <img src={Asrock} alt="Asrock" />
                 </SwiperSlide>
-                <SwiperSlide className='slide_item'>
+                <SwiperSlide className='item__swiper-slide'>
                     <img src={Coolerm} alt="Coolerm" />
                 </SwiperSlide>
-                <SwiperSlide className='slide_item'>
+                <SwiperSlide className='item__swiper-slide'>
                     <img src={MSI} alt="MSI" />
                 </SwiperSlide>
             </Swiper>

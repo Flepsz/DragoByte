@@ -10,20 +10,26 @@
     padding-left: 7rem;
     padding-top: 1vh;
 }
-
-.swiper-container {
+ 
+.swiper_container {
     width: 80%;
+    text-align: center;
+    display: flex;
 }
 
-.slide-item {
-    margin: 10px;
+.swiper-wrapper {
+    align-items: center;
 }
 
-.slide-item img {
+.item__swiper-slide {
+    width: 137px;
+    height: 100px;
+    border: 1px solid #580E78;
+}
+/*
+.slide_item img {
     height: 100%;
-    object-fit: cover;
-    width: 100%;
-}
+} */
 
 @media screen and (max-width: 768px) {
     .title__brands {
