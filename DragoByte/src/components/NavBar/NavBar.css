@@ -76,8 +76,9 @@ a:hover {
         right: 0;
         width: 45%;
         height: 50%;
-        border-left: 1px solid #580e78;
-        border-bottom: 1px solid #580e78;
+        border-left: 2px solid #580e78;
+        border-bottom: 2px solid #580e78;
+        border-bottom-left-radius: 10px;
         flex-direction: column;
         transform: translateX(100%);
         transition: 0.4s ease-in;
