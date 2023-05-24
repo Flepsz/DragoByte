@@ -5,7 +5,6 @@ import Card  from './img/Card.png'
 import SegRa from './img/SegRa.png'
 import Blindado from './img/Blindado.png'
 import SegGoogle from './img/SegGoogle.png'
-import eBit from './img/eBit.png'
 import Insta from './img/Insta.png'
 import Twitter from './img/Twitter.png'
 import Yt from './img/Yt.png'
@@ -30,7 +29,6 @@ const Footer = () => {
                         <img src={SegRa} alt="Ra1000" />
                         <img src={Blindado} alt="Blindado" />
                         <img src={SegGoogle} alt="Google Site Seguro" />
-                        <img src={eBit} alt="eBit" />
                     </div>
                 </div>
             </section>

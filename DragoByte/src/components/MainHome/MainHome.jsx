@@ -1,9 +1,9 @@
 import React from 'react'
 import {EmblaCarousel} from '../Carousel/EmblaCarousel.jsx'
 import Products from '../Products/Products.jsx'
-import './Main.css'
+import './MainHome.css'
 
-function Main() {
+function MainHome() {
     return (
       <main>
         <EmblaCarousel />
@@ -13,4 +13,4 @@ function Main() {
     )
   }
   
-export default Main
+export default MainHome

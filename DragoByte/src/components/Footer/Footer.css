@@ -4,6 +4,8 @@
     height: auto;
     margin-top: 3vh;
     box-sizing: border-box;
+    border-top: 1px solid #580E78;
+
 }
 
 .main-ft {
@@ -11,19 +13,19 @@
     height: 15vh;
     display: flex;
     background: #fff;
-    border-top: 1px solid #580E78;
     padding-top: 3vh;
     padding-left: 3vh;
-    justify-content: center;
-    gap: 30%;
+    justify-content: space-between;
+    max-width: 80vw;
+    margin: auto;
     color: #580E78;
-    font-size: 1rem;
+    font-size: 1.7vh;
     font-weight: 600;
 }
 
 .payments-img{
     display: flex;
-    height: 1.6rem;
+    height: 2vh;
     gap: 0.5rem;
     margin-top: 0.5rem;
     margin-left: 1rem;
@@ -31,7 +33,8 @@
 
 .security-img{
     display: flex;
-    height: 2rem;
+    height: 3vh;
+    width: 100%;
     gap: 3rem;
     margin-top: 0.5rem;
     margin-left: 1rem;
@@ -45,4 +48,39 @@
     padding-top: 0.5rem;
     padding-bottom: 0.3rem;
     gap: 1rem;
+}
+
+@media screen and (max-width: 675px) {
+    .main-ft {
+        font-size: 1.2vh;
+        padding-top: 2vh;
+    }
+
+    .security-img {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    img {
+        height: 2vh;
+    }
+    
+}
+
+@media screen and (max-width: 485px) {
+    .main-ft {
+        font-size: 1vh;
+        padding-top: 2vh;
+    }
+
+    .security-img {
+        height: 4vh;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    img {
+        height: 2vh;
+    }
+    
 }
