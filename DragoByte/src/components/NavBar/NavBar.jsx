@@ -20,22 +20,22 @@ function NavBar() {
 
     return (
         <nav className="nav">
-            <a href="/" className="nav__brand">
+            <a href="/" target="_blank" rel="noreferrer" className="nav__brand">
                 <img className="nav__brand" src={Logo} alt="DragoByte Logo" />
             </a>
             <ul className={active}>
                 <li className="nav__item">
-                    <a href="#" className="nav__link">
+                    <a href="#" target="_blank" rel="noreferrer" className="nav__link">
                         Home
                     </a>
                 </li>
                 <li className="nav__item">
-                    <a href="#" className="nav__link">
+                    <a href="#" target="_blank" rel="noreferrer" className="nav__link">
                         Produtos
                     </a>
                 </li>
                 <li className="nav__item">
-                    <a href="#" className="nav__link">
+                    <a href="#" target="_blank" rel="noreferrer" className="nav__link">
                         Sobre
                     </a>
                 </li>

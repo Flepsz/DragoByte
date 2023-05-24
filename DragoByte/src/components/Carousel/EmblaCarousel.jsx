@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import carGeek from "./cargeek.webp";
-import carGeekMb from "./cargeekmb.webp"
-import carMaio from "./carmaio.webp";
-import carMaioMb from "./carmaiomb.webp"
+import carGeek from "./img/cargeek.webp";
+import carGeekMb from "./img/cargeekmb.webp"
+import carMaio from "./img/carmaio.webp";
+import carMaioMb from "./img/carmaiomb.webp"
 import "./EmblaCarousel.css";
 import Line from "../Line/Line.jsx"
 
