@@ -1,0 +1,32 @@
+
+
+.notFound-container {
+    height: 100%;
+    width: 100vw;
+    margin: auto;
+    justify-content: center;
+}
+
+.notFound-img {
+    padding: 3rem;
+    margin: auto;
+    display: flex;
+    width: 35rem;
+}
+
+.notFound-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.notFound-404 {
+    font-weight: 800;
+    font-size: 6rem;
+}
+
+.notFound-inside {
+    font-weight: 500;
+    font-size: 2.2rem;
+}
