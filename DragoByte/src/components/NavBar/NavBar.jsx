@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from 'react-router-dom'
 import Logo from "./dragobyte-logo.png";
 import "./NavBar.css";
 import SearchBar from "../SearchBar/SearchBar";
@@ -20,24 +21,24 @@ function NavBar() {
 
     return (
         <nav className="nav">
-            <a href="/" target="_blank" rel="noreferrer" className="nav__brand">
+            <a href="/" rel="noreferrer" className="nav__brand">
                 <img className="nav__brand" src={Logo} alt="DragoByte Logo" />
             </a>
             <ul className={active}>
                 <li className="nav__item">
-                    <a href="#" target="_blank" rel="noreferrer" className="nav__link">
+                    <Link to="/" rel="noreferrer" className="nav__link">
                         Home
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav__item">
-                    <a href="#" target="_blank" rel="noreferrer" className="nav__link">
+                    <Link to="/produtos" rel="noreferrer" className="nav__link">
                         Produtos
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav__item">
-                    <a href="#" target="_blank" rel="noreferrer" className="nav__link">
+                    <Link to="/sobre" rel="noreferrer" className="nav__link">
                         Sobre
-                    </a>
+                    </Link>
                 </li>
             </ul>
             <SearchBar />

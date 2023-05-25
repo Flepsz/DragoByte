@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import Line from '../Line/Line.jsx'
 
@@ -16,14 +16,40 @@ import './BestBrands.css'
 import 'swiper/swiper.css'
 
 function BestBrands() {
+    const [slidePerView, setSlidePerView] = useState(6)
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+
+    useEffect(() => {
+        const handleResize = () => {
+          setScreenWidth(window.innerWidth);
+        };
+    
+        window.addEventListener('resize', handleResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+    
+    useEffect(() => {
+    if (screenWidth < 800) {
+        setSlidePerView(4);
+    } if (screenWidth < 450) {
+        setSlidePerView(2);
+    } else {
+        setSlidePerView(6)
+    }
+    }, [screenWidth]);
+
+
     return (
         <section>
             <Line />
             <p className="title__brands">MELHORES MARCAS</p>
             <Swiper
             spaceBetween={2}
-            slidesPerView={6}
-            loop={true}
+            slidesPerView={slidePerView}
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
             className='swiper_container'>
