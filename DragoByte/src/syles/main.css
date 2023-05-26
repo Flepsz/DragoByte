@@ -7,6 +7,7 @@
   box-sizing: border-box;
   background: #ffffff;
   min-width: 350px;
+  --prpl: #580E78;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,7 +16,25 @@
   -webkit-text-size-adjust: 100%;
 }
 
-.container {
-  max-width: 120vh;
-  margin: 0 auto;
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #580e7800;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--prpl);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4c0e66;
+
+}
+
+@media (max-width: 400px) {
+  :root {
+    width: 400px;
+  }
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./Products.css";
 
 import ProductCard from "../ProductCard/ProductCard";
@@ -22,7 +22,7 @@ function Products() {
 
 
     return (
-        <section className="products__container">
+        <section key={products.id} className="products__container">
             {products.map((product) => <ProductCard key={products.id} data={product} />)}
         </section>
     );

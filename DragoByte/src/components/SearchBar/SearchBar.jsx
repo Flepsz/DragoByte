@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { BiSearch } from "react-icons/bi";
-import CardButton from "../CartButton/CartButton";
+import { useState } from "react";
+import SearchIcon from './search.png'
+import CartButton from "../CartButton/CartButton";
 
 
 import "./SearchBar.css";
@@ -19,10 +19,10 @@ function SearchBar() {
                     required
                 />
                 <button type="submit" className="search__button">
-                    <BiSearch />
+                    <img className='icon__SearchBar' src={SearchIcon} alt="Botão Pesquisa" />
                 </button>
             </form>
-            <CardButton />
+            <CartButton />
         </div>
     );
 }

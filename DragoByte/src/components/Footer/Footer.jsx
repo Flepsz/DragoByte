@@ -1,4 +1,3 @@
-import React from 'react'
 import Pix from './img/Pix.png'
 import Nu from './img/Nubank.png'
 import Card  from './img/Card.png'
@@ -33,15 +32,15 @@ const Footer = () => {
                 </div>
             </section>
             <section className='social-media'>
-            <a href="/" target="_blank" rel="noreferrer">
-                <img src={Insta} alt="Instagram" />
-            </a>
-            <a href="https://twitter.com/ByteDrago" target="_blank" rel="noreferrer">
-                <img src={Twitter} alt="Twitter" />
-            </a>
-            <a href="https://www.youtube.com/watch?v=ub82Xb1C8os" target="_blank" rel="noreferrer">
-                <img src={Yt} alt="Youtube" />
-            </a>
+                <a href="/" target="_blank" rel="noreferrer">
+                    <img src={Insta} alt="Instagram" />
+                </a>
+                <a href="https://twitter.com/ByteDrago" target="_blank" rel="noreferrer">
+                    <img src={Twitter} alt="Twitter" />
+                </a>
+                <a href="https://www.youtube.com/watch?v=ub82Xb1C8os" target="_blank" rel="noreferrer">
+                    <img src={Yt} alt="Youtube" />
+                </a>
             </section>
         </footer>
     );

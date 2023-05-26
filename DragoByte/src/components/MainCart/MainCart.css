@@ -1,0 +1,14 @@
+.container__ItemsCart {
+    margin: 8vh auto auto 4vw;
+    padding: 1.5rem;
+    border: 1px solid #580E78;
+    border-radius: 10px;
+    width: 60vw;
+}
+
+.title__ItensCart {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.2vw;
+}

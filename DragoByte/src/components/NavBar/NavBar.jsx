@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {Link} from 'react-router-dom'
 import Logo from "./dragobyte-logo.png";
 import "./NavBar.css";
@@ -21,9 +21,9 @@ function NavBar() {
 
     return (
         <nav className="nav">
-            <a href="/" rel="noreferrer" className="nav__brand">
+            <Link to="/" rel="noreferrer" className="nav__brand">
                 <img className="nav__brand" src={Logo} alt="DragoByte Logo" />
-            </a>
+            </Link>
             <ul className={active}>
                 <li className="nav__item">
                     <Link to="/" rel="noreferrer" className="nav__link">

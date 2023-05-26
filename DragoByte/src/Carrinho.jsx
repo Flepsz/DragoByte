@@ -1,13 +1,13 @@
 import Header from './components/Header/Header.jsx'
-import MainSobre from './components/MainSobre/MainSobre.jsx';
+import MainCart from './components/MainCart/MainCart.jsx'
 import Footer from './components/Footer/Footer.jsx'
 
-function Sobre() {
-    return (
+function Carrinho() {
+    return ( 
         <div>
-            <MainSobre />
+            <MainCart />
         </div>
     );
 }
 
-export default Sobre;
+export default Carrinho;

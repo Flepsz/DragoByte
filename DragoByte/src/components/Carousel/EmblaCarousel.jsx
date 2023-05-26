@@ -1,10 +1,12 @@
-import React, {useState, useEffect} from "react";
+import {useState, useEffect} from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import carGeek from "./img/cargeek.webp";
 import carGeekMb from "./img/cargeekmb.webp"
+import carGeekMb550 from "./img/cargeekmb550.png"
 import carMaio from "./img/carmaio.webp";
 import carMaioMb from "./img/carmaiomb.webp"
+import carMaioMb550 from "./img/carmaiomb550.png"
 import "./EmblaCarousel.css";
 import Line from "../Line/Line.jsx"
 
@@ -29,13 +31,16 @@ export const EmblaCarousel = (props) => {
     }, []);
     
     useEffect(() => {
-    if (screenWidth < 450) {
-        setImg1(carMaioMb);
-        setImg2(carGeekMb);
-    } else {
-        setImg1(carMaio);
-        setImg2(carGeek);
-    }
+        if (screenWidth < 450){
+            setImg1(carMaioMb);
+            setImg2(carGeekMb);
+        } else if (screenWidth > 550) {
+            setImg1(carMaio);
+            setImg2(carGeek);
+        } else {
+            setImg1(carMaioMb550);
+            setImg2(carGeekMb550);
+        }
     }, [screenWidth]);
 
     return (

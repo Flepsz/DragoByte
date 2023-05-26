@@ -8,7 +8,6 @@ import "./NotFound.css";
 function NotFound() {
     return (
         <div>
-            <Header />
             <section className='notFound-container'>
                 <img className='notFound-img' src={Logo} alt="Prpldg" />
                 <div className="notFound-text">
