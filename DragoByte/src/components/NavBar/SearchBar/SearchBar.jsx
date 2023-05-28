@@ -1,7 +1,6 @@
 import { useState } from "react";
-import SearchIcon from './search.png'
+import SearchIcon from "./search.png";
 import CartButton from "../CartButton/CartButton";
-
 
 import "./SearchBar.css";
 
@@ -19,7 +18,11 @@ function SearchBar() {
                     required
                 />
                 <button type="submit" className="search__button">
-                    <img className='icon__SearchBar' src={SearchIcon} alt="Botão Pesquisa" />
+                    <img
+                        className="icon__SearchBar"
+                        src={SearchIcon}
+                        alt="Botão Pesquisa"
+                    />
                 </button>
             </form>
             <CartButton />

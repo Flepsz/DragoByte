@@ -6,7 +6,7 @@ import fetchProducts from "../../../api/fetchProducts";
 
 function Products() {
     const [products, setProducts] = useState([]);
-    const [searchProducts, setSearchProducts] = useState("ps5");
+    const [searchProducts, setSearchProducts] = useState("placa mae b550");
 
     // const setSearch = (value_search) => {
     //     setSearchProducts(value_search)
@@ -25,6 +25,7 @@ function Products() {
                 <ProductCard key={products.id} data={product} />
             ))}
         </section>
+        
     );
 }
 
