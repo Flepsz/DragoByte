@@ -1,0 +1,16 @@
+.mais__vendidos {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-left: 7rem;
+    padding-top: 1vh;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .mais__vendidos {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+}
