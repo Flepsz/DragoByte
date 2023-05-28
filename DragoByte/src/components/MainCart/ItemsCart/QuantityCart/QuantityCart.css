@@ -1,0 +1,51 @@
+.container__QuantityCart {
+    margin: auto 6vw auto 6vw;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.count__QuantityCart {
+    margin-top: 0.2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.number__QuantityCart {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.left-arrow {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    opacity: 0.3;
+}
+
+.right-arrow {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #580E78;
+    cursor: pointer;
+}
+
+.remove__QuantityCart {
+    cursor: pointer;
+    padding-top: 0.4rem;
+    display: flex;
+    color: #D60000;
+}
+
+.trash__QuantityCart {
+    display: flex;
+    align-items: center;
+}
+
+.rmtext__QuantityCart {
+    font-weight: 700;
+}

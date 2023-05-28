@@ -1,6 +1,5 @@
-import React from 'react'
 import {EmblaCarousel} from '../Carousel/EmblaCarousel.jsx'
-import Products from '../Products/Products.jsx'
+import Products from './Products/Products.jsx'
 import BestBrands from '../BestBrands/BestBrands.jsx'
 
 import 'swiper/css'

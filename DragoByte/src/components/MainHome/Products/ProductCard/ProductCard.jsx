@@ -1,6 +1,6 @@
 import propTypes from 'prop-types';
 import "./ProductCard.css"
-import formatCurrency from '../../utils/formatCurrency';
+import formatCurrency from '../../../../utils/formatCurrency';
 
 function ProductCard({ data }) {
 

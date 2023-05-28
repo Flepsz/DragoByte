@@ -1,8 +1,7 @@
-
-
 .notFound-container {
+    min-height: 73.2vh;
     height: 100%;
-    width: 100vw;
+    width: 99vw;
     margin: auto;
     justify-content: center;
 }

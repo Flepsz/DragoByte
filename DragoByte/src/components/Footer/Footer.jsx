@@ -32,7 +32,7 @@ const Footer = () => {
                 </div>
             </section>
             <section className='social-media'>
-                <a href="/" target="_blank" rel="noreferrer">
+                <a href="https://www.instagram.com/dragobyte_/" target="_blank" rel="noreferrer">
                     <img src={Insta} alt="Instagram" />
                 </a>
                 <a href="https://twitter.com/ByteDrago" target="_blank" rel="noreferrer">

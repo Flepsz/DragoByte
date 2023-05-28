@@ -1,9 +1,17 @@
+.mainCart {
+    min-height: 73.2vh;
+    display: flex;
+}
+
 .container__ItemsCart {
-    margin: 8vh auto auto 4vw;
+    margin: 8vh 0 auto 4vw;
     padding: 1.5rem;
     border: 1px solid #580E78;
     border-radius: 10px;
-    width: 60vw;
+    width: fit-content;
+    max-width: 70vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .title__ItensCart {
@@ -12,3 +20,23 @@
     align-items: center;
     gap: 0.2vw;
 }
+
+.container__ResumCart {
+    margin: 8vh auto auto 3vw;
+    padding: 1.5rem;
+    border: 1px solid #580E78;
+    border-radius: 10px;
+    width: 35rem;
+    max-width: 60vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.title__ResumCart {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+

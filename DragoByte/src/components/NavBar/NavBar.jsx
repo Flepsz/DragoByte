@@ -2,7 +2,7 @@ import { useState } from "react";
 import {Link} from 'react-router-dom'
 import Logo from "./dragobyte-logo.png";
 import "./NavBar.css";
-import SearchBar from "../SearchBar/SearchBar";
+import SearchBar from "./SearchBar/SearchBar";
 
 function NavBar() {
     const [active, setActive] = useState("nav__menu");

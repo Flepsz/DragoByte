@@ -1,6 +1,7 @@
 .sobre {
+    min-height: 65.2vh;
     width: 62vw;
-    margin: 9vh auto 8vh auto;
+    margin: 9vh auto auto auto;
     justify-content: center;
 }
 

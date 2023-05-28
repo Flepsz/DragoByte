@@ -1,4 +1,3 @@
-import React from 'react'
 import './MainSobre.css'
 
 function MainSobre() {
@@ -28,6 +27,6 @@ function MainSobre() {
         </section>
     </main>
     )
-};
+}
 
 export default MainSobre;
