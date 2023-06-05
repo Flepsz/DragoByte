@@ -1,30 +1,57 @@
-import Test from "./test.png";
-import Fire from "./fire.png";
-import "./ItemsCart.css";
-import QuantityCart from "./QuantityCart/QuantityCart";
+import { useState, useEffect } from 'react';
+import './ItemsCart.css';
+import QuantityCart from './QuantityCart/QuantityCart';
 
 function ItemsCart() {
-    return (
-        <article className="content__ItemsCart">
-            <img className="img__ItemsCart" src={Test} alt="Product" />
-            <div className="desc__ItemsCart">
-                <h1 className="h1__ItemsCart">AMD</h1>
-                <p className="nameP__ItemsCart">
-                    Processador AMD Ryzen 7 7700X 4.5GHz (5.4GHz Turbo), 8-Cores
-                    16-Threads
-                </p>
-                <div className="oferta__ItemsCart">
-                    <img className="img-oferta__ItemsCart" src={Fire} alt="Fire" />
-                    <h1 className="h1__ItemsCart">OFERTA DRAGO</h1>
-                </div>
+  const [cartItems, setCartItems] = useState([]);
+
+  useEffect(() => {
+    const storedItems = localStorage.getItem("cartItems");
+    if (storedItems) {
+      setCartItems(JSON.parse(storedItems));
+    }
+  }, []);
+
+  const handleQuantityChange = (index, newQuantity) => {
+    setCartItems((prevItems) => {
+      const updatedItems = [...prevItems];
+      updatedItems[index].quantity = newQuantity;
+      return updatedItems;
+    });
+  };
+
+  const handleRemoveItem = (index) => {
+    const updatedCartItems = [...cartItems];
+    updatedCartItems.splice(index, 1);
+    setCartItems(updatedCartItems);
+    localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+  };
+
+
+  return (
+    <article className="content__ItemsCart">
+      {cartItems.map((item, index) => (
+        <div className='all__ItemsCart' key={index}>
+          <img className="img__ItemsCart" src={item.thumbnail} alt="Product" />
+          <div className="desc__ItemsCart">
+            <h1 className="h1__ItemsCart">{item.brand}</h1>
+            <p className="nameP__ItemsCart">{item.title}</p>
+            <div className="oferta__ItemsCart">
+              <h1 className="h1__ItemsCart">OFERTA DRAGO</h1>
             </div>
-            <QuantityCart />
-            <div className="value__ItemsCart">
-                <h1 className="h1__ItemsCart">Preço à Vista:</h1>
-                <p className="price__ItemsCart">R$ 2.279,00</p>
-            </div>
-        </article>
-    );
+          </div>
+          <QuantityCart
+            quantity={item.quantity}
+            price={item.price}
+            onRemove={() => handleRemoveItem(index)}
+            onQuantityChange={(newQuantity) =>
+              handleQuantityChange(index, newQuantity)
+            }
+          />
+        </div>
+      ))}
+    </article>
+  );
 }
 
 export default ItemsCart;

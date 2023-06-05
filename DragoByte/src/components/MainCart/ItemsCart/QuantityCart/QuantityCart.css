@@ -1,3 +1,7 @@
+.all__QuantityCart {
+    display: flex;
+}
+
 .container__QuantityCart {
     margin: auto 6vw auto 6vw;
     padding-bottom: 2rem;
@@ -23,7 +27,8 @@
     display: flex;
     align-items: center;
     font-size: 2rem;
-    opacity: 0.3;
+    color: #580E78;
+    cursor: pointer;
 }
 
 .right-arrow {
@@ -32,6 +37,11 @@
     font-size: 2rem;
     color: #580E78;
     cursor: pointer;
+}
+
+.disabled {
+    opacity: 0.3;
+    cursor: default;
 }
 
 .remove__QuantityCart {
