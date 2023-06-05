@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './ItemsCart.css';
+import Fire from "./fire.png";
 import QuantityCart from './QuantityCart/QuantityCart';
 
 function ItemsCart() {
@@ -46,6 +47,7 @@ function ItemsCart() {
             <h1 className="h1__ItemsCart">{item.brand}</h1>
             <p className="nameP__ItemsCart">{item.title}</p>
             <div className="oferta__ItemsCart">
+              <img className="img-oferta__ItemsCart" src={Fire} alt="Fire" />
               <h1 className="h1__ItemsCart">OFERTA DRAGO</h1>
             </div>
           </div>

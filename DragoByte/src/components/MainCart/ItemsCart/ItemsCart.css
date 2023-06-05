@@ -33,13 +33,13 @@
 
 .oferta__ItemsCart {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    align-items: end;
+    gap: 0.6rem;
     margin-top: 0.5rem;
 }
 
 .img-oferta__ItemsCart {
-    height: 1.8rem;
+    height: 1.5rem;
 }
 
 .value__ItemsCart {
