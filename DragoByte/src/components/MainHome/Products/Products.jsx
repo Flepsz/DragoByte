@@ -4,28 +4,26 @@ import "./Products.css";
 import ProductCard from "./ProductCard/ProductCard";
 import fetchProducts from "../../../api/fetchProducts";
 
-function Products() {
+function Products({ searchProduct }) {
     const [products, setProducts] = useState([]);
-    const [searchProducts, setSearchProducts] = useState("placa mae b550");
-
-    // const setSearch = (value_search) => {
-    //     setSearchProducts(value_search)
-    // }
 
     useEffect(() => {
-        fetchProducts(searchProducts).then((response) => {
+        const fetchData = async () => {
+            const response = await fetchProducts(searchProduct);
             setProducts(response);
-            console.log(products);
-        });
-    }, []);
+            console.log(response);
+        };
+
+        fetchData();
+    }, [searchProduct]);
 
     return (
         <section key={products.id} className="products__container">
             {products.map((product) => (
                 <ProductCard key={products.id} data={product} />
             ))}
+
         </section>
-        
     );
 }
 
