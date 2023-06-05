@@ -24,6 +24,7 @@ function QuantityCart({ quantity, price, onQuantityChange, onRemove }) {
 
     const handleRemove = () => {
         onRemove();
+        window.location.reload();
     };
 
     return (

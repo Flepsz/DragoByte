@@ -6,7 +6,7 @@ function ItemsCart() {
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
-    const storedItems = localStorage.getItem("cartItems");
+    const storedItems = localStorage.getItem('cartItems');
     if (storedItems) {
       setCartItems(JSON.parse(storedItems));
     }
@@ -27,11 +27,19 @@ function ItemsCart() {
     localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
   };
 
+  if (cartItems.length === 0) {
+    return (
+      <div className='empty__ItemsCart'>
+        <p className="emptytitle__ItemsCart">Seu carrinho está vazio!</p>
+        <a target="_blank" href="/produtos"><button className="continue-buy__ResumCard">CONTINUAR COMPRANDO</button></a>
+      </div>
+    )
+  }
 
   return (
     <article className="content__ItemsCart">
       {cartItems.map((item, index) => (
-        <div className='all__ItemsCart' key={index}>
+        <div className="all__ItemsCart" key={index}>
           <img className="img__ItemsCart" src={item.thumbnail} alt="Product" />
           <div className="desc__ItemsCart">
             <h1 className="h1__ItemsCart">{item.brand}</h1>

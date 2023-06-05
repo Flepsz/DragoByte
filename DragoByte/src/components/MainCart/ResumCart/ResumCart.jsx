@@ -56,7 +56,7 @@ function ResumCart() {
             </div>
 
             <div className="buttons__ResumCard">
-                <Link to=""><button className="comprar__ResumCard">COMPRAR</button></Link>
+                <Link to='/agradecimento'><button className="comprar__ResumCard">COMPRAR</button></Link>
                 <a target="_blank" href="/produtos"><button className="continue-buy__ResumCard">CONTINUAR COMPRANDO</button></a>
             </div>
         </article>

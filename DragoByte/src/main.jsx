@@ -4,6 +4,7 @@ import Home from "./Home.jsx";
 import Sobre from "./Sobre.jsx";
 import NotFound from "./components/NotFound/NotFound.jsx";
 import Carrinho from "./Carrinho.jsx";
+import Agradecimento from "./Agradecimento";
 import Header from "./components/Header/Header.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import "./syles/main.css";
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 <Route path="/sobre" element={<Sobre />} />
                 <Route path='/produtos' element={<Produtos />} />
                 <Route path="/carrinho" element={<Carrinho />} />
+                <Route path="/agradecimento" element={<Agradecimento />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
