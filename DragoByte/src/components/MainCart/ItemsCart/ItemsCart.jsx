@@ -16,6 +16,7 @@ function ItemsCart() {
     setCartItems((prevItems) => {
       const updatedItems = [...prevItems];
       updatedItems[index].quantity = newQuantity;
+      localStorage.setItem('cartItems', JSON.stringify(updatedItems));
       return updatedItems;
     });
   };

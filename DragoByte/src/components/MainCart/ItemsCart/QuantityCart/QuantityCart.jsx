@@ -12,6 +12,7 @@ function QuantityCart({ quantity, price, onQuantityChange, onRemove }) {
         const newQuantity = currentQuantity + 1;
         setCurrentQuantity(newQuantity);
         onQuantityChange(newQuantity);
+        window.location.reload();
     };
 
     const decreaseQuantity = () => {
@@ -19,6 +20,7 @@ function QuantityCart({ quantity, price, onQuantityChange, onRemove }) {
             const newQuantity = currentQuantity - 1;
             setCurrentQuantity(newQuantity);
             onQuantityChange(newQuantity);
+            window.location.reload();
         }
     };
 
