@@ -55,8 +55,8 @@ function ResumCart() {
                         </p>
                     </div>
                     <div className="buttons__ResumCard">
-                        <Link to='/agradecimento'><button className="comprar__ResumCard">COMPRAR</button></Link>
-                        <a target="_blank" href="/produtos"><button className="continue-buy__ResumCard">CONTINUAR COMPRANDO</button></a>
+                        <Link rel="noreferrer" to='/agradecimento'><button className="comprar__ResumCard">COMPRAR</button></Link>
+                        <Link rel="noreferrer" target="_blank" to="/produtos"><button className="continue-buy__ResumCard">CONTINUAR COMPRANDO</button></Link>
                     </div>
                 </>
             ) : (

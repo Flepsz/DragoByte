@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './ItemsCart.css';
+import { Link } from 'react-router-dom';
 import Fire from "./fire.png";
 import QuantityCart from './QuantityCart/QuantityCart';
 
@@ -33,7 +34,7 @@ function ItemsCart() {
     return (
       <div className='empty__ItemsCart'>
         <p className="emptytitle__ItemsCart">Seu carrinho está vazio!</p>
-        <a target="_blank" href="/produtos"><button className="continue-buy__ResumCard">CONTINUAR COMPRANDO</button></a>
+        <Link rel="noreferrer" to="/produtos"><button className="continue-buy__ResumCard">CONTINUAR COMPRANDO</button></Link>
       </div>
     )
   }
