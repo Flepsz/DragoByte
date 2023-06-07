@@ -13,7 +13,7 @@ function ProductCard({ data }) {
         return Math.floor(Math.random() * (50 - 1)) + 1;
     }
 
-    const { title, thumbnail, price, attributes } = data;
+    const { id, title, thumbnail, price, attributes } = data;
     const brand = attributes[1].value_name;
 
     const handleAddToCart = () => {
@@ -47,7 +47,7 @@ function ProductCard({ data }) {
     }, [cartItems]);
 
     return (
-        <section className="product__card">
+        <section className="product__card" key={id}>
             <div className="card__header">
                 <div className="card-off">
                     <div className="percent">{desconto()}%</div>
@@ -81,6 +81,7 @@ function ProductCard({ data }) {
 
 ProductCard.propTypes = {
     data: PropTypes.shape({
+        id: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
         thumbnail: PropTypes.string.isRequired,
         price: PropTypes.number.isRequired,
@@ -88,7 +89,7 @@ ProductCard.propTypes = {
             PropTypes.shape({
                 value_name: PropTypes.string.isRequired,
             })
-        ),
+        ).isRequired,
     }).isRequired,
 };
 

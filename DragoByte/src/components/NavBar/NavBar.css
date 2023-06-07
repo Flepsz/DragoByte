@@ -42,7 +42,6 @@
     align-items: center;
     justify-content: space-around;
     gap: 14vh;
-    padding-inline-start: 15vh;
 }
 
 .nav__toggler div {

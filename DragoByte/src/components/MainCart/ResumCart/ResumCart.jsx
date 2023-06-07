@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import "./ResumCart.css";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import formatCurrency from "../../../utils/formatCurrency";
 
 function ResumCart() {
@@ -28,6 +28,11 @@ function ResumCart() {
         return total + freight;
     };
 
+    const handleFinalizePurchase = () => {
+        localStorage.removeItem("cartItems");
+        setCartItems([]);
+    };
+
     return (
         <article className="content__ResumCart">
             {cartItems.length > 0 ? (
@@ -51,18 +56,32 @@ function ResumCart() {
                             {formatCurrency(calculateTotalWithFreight(), "BRL")}
                         </h1>
                         <p className="pText-pc__ResumCard">
-                            (Economize: <b>{formatCurrency((calculateTotalWithFreight() * 0.05), "BRL")}</b> )
+                            (Economize:{" "}
+                            <b>
+                                {formatCurrency(
+                                    calculateTotalWithFreight() * 0.05,
+                                    "BRL"
+                                )}
+                            </b>{" "}
+                            )
                         </p>
                     </div>
                     <div className="buttons__ResumCard">
-                        <Link rel="noreferrer" to='/agradecimento'><button className="comprar__ResumCard">COMPRAR</button></Link>
-                        <Link rel="noreferrer" target="_blank" to="/produtos"><button className="continue-buy__ResumCard">CONTINUAR COMPRANDO</button></Link>
+                        <Link rel="noreferrer" to="/agradecimento">
+                            <button className="comprar__ResumCard" onClick={handleFinalizePurchase}>
+                                COMPRAR
+                            </button>
+                        </Link>
+                        <Link rel="noreferrer" target="_blank" to="/produtos">
+                            <button className="continue-buy__ResumCard">
+                                CONTINUAR COMPRANDO
+                            </button>
+                        </Link>
                     </div>
                 </>
             ) : (
-                <p className='d'>Não há itens no carrinho.</p>
+                <p className="d">Não há itens no carrinho.</p>
             )}
-            
         </article>
     );
 }
