@@ -19,7 +19,7 @@ class Web:
                 'xpath': '/html/body/div/div/main/section[1]/section[%price%]/div[2]/h2[2]'
             }
         }
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Edge()
         self.driver.maximize_window()
         self.scrap()
         self.tocsv()
