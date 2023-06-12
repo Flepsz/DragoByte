@@ -23,12 +23,12 @@
 }
 
 .pText__ResumCart {
-    font-size: 1.25rem;
+    font-size: clamp(0.5rem, 0.7rem + 1vw, 1.5rem);
     font-weight: 500;
 }
 
 .pValue__ResumCart {
-    font-size: 1.5rem;
+    font-size: clamp(0.5rem, 0.7rem + 1vw, 1.5rem);
     font-weight: 700;
 }
 
@@ -46,11 +46,11 @@
 
 .pText-pc__ResumCard {
     font-weight: 500;
-    font-size: 1.4rem;
+    font-size: clamp(0.5rem, 0.8rem + 1vw, 1.4rem);
 }
 
 .h1Value__ResumCard {
-    font-size: 2.8rem;
+    font-size: clamp(1.5rem, 2rem + 1vw, 3rem);
 }
 
 .buttons__ResumCard {
@@ -70,7 +70,7 @@
     border: 1.5px solid #580e78;
     border-radius: 5px;
     height: 4rem;
-    width: 25rem;
+    width: 100%;
 }
 
 .continue-buy__ResumCard {
@@ -83,7 +83,7 @@
     border: 1.5px solid #580e78;
     border-radius: 5px;
     height: 4rem;
-    width: 25rem;
+    width: 100%;
 }
 
 .comprar__ResumCard:hover {
@@ -97,3 +97,4 @@
     background: #580e78;
     color: #fff;
 }
+

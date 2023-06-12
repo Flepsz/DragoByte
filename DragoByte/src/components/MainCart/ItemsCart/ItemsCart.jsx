@@ -34,7 +34,7 @@ function ItemsCart() {
     return (
       <div className='empty__ItemsCart'>
         <p className="emptytitle__ItemsCart">Seu carrinho está vazio!</p>
-        <Link rel="noreferrer" to="/produtos"><button className="continue-buy__ResumCard">CONTINUAR COMPRANDO</button></Link>
+        <Link rel="noreferrer" to="/produtos"><button className="continue-buy__ItemsCart">CONTINUAR COMPRANDO</button></Link>
       </div>
     )
   }
@@ -43,15 +43,17 @@ function ItemsCart() {
     <article className="content__ItemsCart">
       {cartItems.map((item, index) => (
         <div className="all__ItemsCart" key={index}>
-          <img className="img__ItemsCart" src={item.thumbnail} alt="Product" />
-          <div className="desc__ItemsCart">
-            <h1 className="h1__ItemsCart">{item.brand}</h1>
-            <p className="nameP__ItemsCart">{item.title}</p>
-            <div className="oferta__ItemsCart">
-              <img className="img-oferta__ItemsCart" src={Fire} alt="Fire" />
-              <h1 className="h1__ItemsCart">OFERTA DRAGO</h1>
+          <div className="junct__ItemsCart">
+            <img className="img__ItemsCart" src={item.thumbnail} alt="Product" />
+            <div className="desc__ItemsCart">
+              <h1 className="h1__ItemsCart">{item.brand}</h1>
+              <p className="nameP__ItemsCart">{item.title}</p>
+              <div className="oferta__ItemsCart">
+                <img className="img-oferta__ItemsCart" src={Fire} alt="Fire" />
+                <h1 className="h1__ItemsCart">OFERTA DRAGO</h1>
+              </div>
             </div>
-          </div>
+        </div>
           <QuantityCart
             quantity={item.quantity}
             price={item.price}
@@ -62,6 +64,8 @@ function ItemsCart() {
           />
         </div>
       ))}
+      <div className="line__ItemsCart"></div>
+
     </article>
   );
 }

@@ -3,7 +3,7 @@
 }
 
 .container__QuantityCart {
-    margin: auto 6vw auto 6vw;
+    margin: auto 5rem;
     padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
@@ -58,4 +58,10 @@
 
 .rmtext__QuantityCart {
     font-weight: 700;
+}
+
+@media screen and (max-width: 1100px) {
+    .container__QuantityCart {
+        margin: auto 5rem 0 0;
+    }
 }
