@@ -84,6 +84,7 @@ function BestBrands() {
                     <img src={MSI} alt="MSI" />
                 </SwiperSlide>
             </Swiper>
+            <Line/>
         </section>
     )
 }

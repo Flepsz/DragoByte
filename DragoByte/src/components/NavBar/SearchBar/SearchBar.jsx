@@ -9,7 +9,7 @@ function SearchBar() {
 
     return (
         <div className="nav__end">
-            <form className="search-bar">
+            {/* <form className="search-bar">
                 <input
                     type="search"
                     value={searchValue}
@@ -24,7 +24,7 @@ function SearchBar() {
                         alt="Botão Pesquisa"
                     />
                 </button>
-            </form>
+            </form> */}
             <CartButton />
         </div>
     );
