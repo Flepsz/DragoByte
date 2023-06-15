@@ -22,7 +22,8 @@
 }
 
 
-textarea:focus, input:focus{
+textarea:focus,
+input:focus {
     outline: none;
 }
 
@@ -140,6 +141,61 @@ form .form-row .textarea {
     position: relative;
     z-index: 2;
 }
+
+.popup {
+    position: fixed;
+    z-index: 9999;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 1.3rem;
+    border-radius: 4px;
+    animation: popupAnimation 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.popup h3 {
+    margin-bottom: 10px;
+    color: #3a3a3a;
+}
+
+.popup button {
+    background-color: #580E78;
+    color: #fff;
+    border: 1px solid;
+    padding: 8px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: #ffffff;
+    border: 1px solid #580E78;
+    color: #580E78;
+}
+
+@keyframes popupAnimation {
+    0% {
+        transform: translate(-50%, -60%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+
 
 @media (max-width: 700px) {
     .container .text {
