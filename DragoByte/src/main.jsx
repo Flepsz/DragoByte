@@ -14,7 +14,7 @@ import Produtos from "./Produtos.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <BrowserRouter basename="/felipe">
+        <BrowserRouter>
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
