@@ -55,6 +55,7 @@ function ContactUS() {
                                 required
                                 name="name"
                                 value={formValues.name}
+                                maxLength={70}
                                 onChange={(e) =>
                                     setFormValues({ ...formValues, name: e.target.value })
                                 }
@@ -70,6 +71,7 @@ function ContactUS() {
                                 required
                                 name="email"
                                 value={formValues.email}
+                                maxLength={70}
                                 onChange={(e) =>
                                     setFormValues({ ...formValues, email: e.target.value })
                                 }
@@ -86,6 +88,7 @@ function ContactUS() {
                                 required
                                 name="message"
                                 value={formValues.message}
+                                maxLength={1000}
                                 onChange={(e) =>
                                     setFormValues({ ...formValues, message: e.target.value })
                                 }

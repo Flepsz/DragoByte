@@ -13,6 +13,7 @@ function SearchBar() {
                 <input
                     type="search"
                     value={searchValue}
+                    maxLength={150}
                     className="search__input"
                     onChange={({ target }) => setSearchValue(target.value)}
                     required
