@@ -132,6 +132,8 @@ form .form-row .textarea {
     color: #fff;
     font-size: 17px;
     font-weight: 500;
+    border-radius: 5px;
+
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;

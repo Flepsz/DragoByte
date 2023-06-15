@@ -1,11 +1,6 @@
 import "./ContactUs.css"
 
 function ContactUS() {
-    const confirmation = () => {
-        window.alert("Sua mensagem foi enviada com sucesso!")
-        document.getElementsByClassName('form__contactus').reset()
-    }
-
     return (
         <section className="main__contactus">
             <p className="title__brands">FALE CONOSCO</p>
@@ -36,7 +31,7 @@ function ContactUS() {
                             <div className="form-row submit-btn">
                                 <div className="input-data">
                                     <div className="inner"></div>
-                                    <input type="submit" value="Enviar" onClick={confirmation}/>
+                                    <input type="submit" value="Enviar"/>
                                 </div>
                             </div>
                         </div>
