@@ -1,4 +1,4 @@
-// Função que formata string para valor de moedas.
+// Função que formata string para valor de moeda.
 const formatCurrency = (value, currency) => {
     return value.toLocaleString('pt-br', {
         style: 'currency',
