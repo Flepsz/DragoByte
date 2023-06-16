@@ -13,18 +13,24 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Produtos from "./Produtos.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <Header />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/sobre" element={<Sobre />} />
-                <Route path='/produtos' element={<Produtos />} />
-                <Route path="/carrinho" element={<Carrinho />} />
-                <Route path="/agradecimento" element={<Agradecimento />} />
-                <Route path="*" element={<NotFound />} />
-            </Routes>
-            <Footer />
-        </BrowserRouter>
-    </React.StrictMode>
+  <React.StrictMode>
+    <BrowserRouter>
+      <Header /> {/* Componente de cabeçalho */}
+      <Routes>
+        {/* Rotas para diferentes páginas */}
+        <Route path="/" element={<Home />} /> {/* Rota para a página inicial */}
+        <Route path="/sobre" element={<Sobre />} />{" "}
+        {/* Rota para a página "Sobre" */}
+        <Route path="/produtos" element={<Produtos />} />{" "}
+        {/* Rota para a página "Produtos" */}
+        <Route path="/carrinho" element={<Carrinho />} />{" "}
+        {/* Rota para a página "Carrinho" */}
+        <Route path="/agradecimento" element={<Agradecimento />} />{" "}
+        {/* Rota para a página "Agradecimento" */}
+        <Route path="*" element={<NotFound />} />{" "}
+        {/* Rota para página "Not Found" */}
+      </Routes>
+      <Footer /> {/* Componente de rodapé */}
+    </BrowserRouter>
+  </React.StrictMode>
 );

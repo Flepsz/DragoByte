@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react'
-import {Swiper, SwiperSlide} from 'swiper/react'
+import { useState, useEffect } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
 import Line from '../Line/Line.jsx'
 
 import AMD from './img/AMD.png'
@@ -20,26 +20,29 @@ function BestBrands() {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
 
+    // Atualiza o estado do screenWidth quando a janela é redimensionada
     useEffect(() => {
         const handleResize = () => {
-          setScreenWidth(window.innerWidth);
+            setScreenWidth(window.innerWidth);
         };
-    
+
         window.addEventListener('resize', handleResize);
-    
+
+        // Remove o evento de redimensionamento ao desmontar o componente
         return () => {
-          window.removeEventListener('resize', handleResize);
+            window.removeEventListener('resize', handleResize);
         };
     }, []);
-    
+
+    // Atualiza o número de slides por exibição com base no tamanho da tela
     useEffect(() => {
-    if (screenWidth < 800) {
-        setSlidePerView(4);
-    } if (screenWidth < 450) {
-        setSlidePerView(2);
-    } else {
-        setSlidePerView(6)
-    }
+        if (screenWidth < 800) {
+            setSlidePerView(4);
+        } else if (screenWidth < 450) {
+            setSlidePerView(2);
+        } else {
+            setSlidePerView(6);
+        }
     }, [screenWidth]);
 
 
@@ -48,11 +51,11 @@ function BestBrands() {
             <Line />
             <p className="title__brands">MELHORES MARCAS</p>
             <Swiper
-            spaceBetween={2}
-            slidesPerView={slidePerView}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
-            className='swiper_container'>
+                spaceBetween={2}
+                slidesPerView={slidePerView}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+                className='swiper_container'>
                 <SwiperSlide className='item__swiper-slide'>
                     <img src={AMD} alt="AMD" />
                 </SwiperSlide>
@@ -84,7 +87,7 @@ function BestBrands() {
                     <img src={MSI} alt="MSI" />
                 </SwiperSlide>
             </Swiper>
-            <Line/>
+            <Line />
         </section>
     )
 }

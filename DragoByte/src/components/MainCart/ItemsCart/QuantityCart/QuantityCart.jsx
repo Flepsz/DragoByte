@@ -8,6 +8,7 @@ function QuantityCart({ quantity, price, onQuantityChange, onRemove }) {
     const [currentQuantity, setCurrentQuantity] = useState(quantity);
     const totalPrice = parseFloat((price * currentQuantity).toFixed(2));
 
+    // Função para aumentar a quantidade do item
     const increaseQuantity = () => {
         const newQuantity = currentQuantity + 1;
         setCurrentQuantity(newQuantity);
@@ -15,6 +16,7 @@ function QuantityCart({ quantity, price, onQuantityChange, onRemove }) {
         window.location.reload();
     };
 
+    // Função para diminuir a quantidade do item
     const decreaseQuantity = () => {
         if (currentQuantity > 1) {
             const newQuantity = currentQuantity - 1;
@@ -24,6 +26,7 @@ function QuantityCart({ quantity, price, onQuantityChange, onRemove }) {
         }
     };
 
+    // Função para lidar com a remoção do item
     const handleRemove = () => {
         onRemove();
         window.location.reload();
@@ -65,10 +68,10 @@ function QuantityCart({ quantity, price, onQuantityChange, onRemove }) {
 }
 
 QuantityCart.propTypes = {
-    quantity: PropTypes.number.isRequired,
-    price: PropTypes.number.isRequired,
-    onQuantityChange: PropTypes.func.isRequired,
-    onRemove: PropTypes.func.isRequired,
+    quantity: PropTypes.number.isRequired, // Propriedade que representa a quantidade do item
+    price: PropTypes.number.isRequired, // Propriedade que representa o preço do item
+    onQuantityChange: PropTypes.func.isRequired, // Função chamada quando a quantidade do item é alterada
+    onRemove: PropTypes.func.isRequired, // Função chamada quando o item é removido
 };
 
 export default QuantityCart;

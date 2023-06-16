@@ -1,42 +1,51 @@
-import { useState, useEffect } from 'react';
-import './ItemsCart.css';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import "./ItemsCart.css";
+import { Link } from "react-router-dom";
 import Fire from "./fire.png";
-import QuantityCart from './QuantityCart/QuantityCart';
+import QuantityCart from "./QuantityCart/QuantityCart";
 
 function ItemsCart() {
   const [cartItems, setCartItems] = useState([]);
 
+  // Efeito que é executado quando o componente é montado
   useEffect(() => {
-    const storedItems = localStorage.getItem('cartItems');
+    // Obtém os itens do carrinho armazenados no localStorage
+    const storedItems = localStorage.getItem("cartItems");
     if (storedItems) {
       setCartItems(JSON.parse(storedItems));
     }
   }, []);
 
+  // Função para lidar com a mudança de quantidade do item no carrinho
   const handleQuantityChange = (index, newQuantity) => {
     setCartItems((prevItems) => {
       const updatedItems = [...prevItems];
       updatedItems[index].quantity = newQuantity;
-      localStorage.setItem('cartItems', JSON.stringify(updatedItems));
+      localStorage.setItem("cartItems", JSON.stringify(updatedItems));
       return updatedItems;
     });
   };
 
+  // Função para remover um item do carrinho
   const handleRemoveItem = (index) => {
     const updatedCartItems = [...cartItems];
     updatedCartItems.splice(index, 1);
     setCartItems(updatedCartItems);
-    localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+    localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
   };
 
+  // Verifica se o carrinho está vazio
   if (cartItems.length === 0) {
     return (
-      <div className='empty__ItemsCart'>
+      <div className="empty__ItemsCart">
         <p className="emptytitle__ItemsCart">Seu carrinho está vazio!</p>
-        <Link rel="noreferrer" to="/produtos"><button className="continue-buy__ItemsCart">CONTINUAR COMPRANDO</button></Link>
+        <Link rel="noreferrer" to="/produtos">
+          <button className="continue-buy__ItemsCart">
+            CONTINUAR COMPRANDO
+          </button>
+        </Link>
       </div>
-    )
+    );
   }
 
   return (
@@ -44,7 +53,11 @@ function ItemsCart() {
       {cartItems.map((item, index) => (
         <div className="all__ItemsCart" key={index}>
           <div className="junct__ItemsCart">
-            <img className="img__ItemsCart" src={item.thumbnail} alt="Product" />
+            <img
+              className="img__ItemsCart"
+              src={item.thumbnail}
+              alt="Product"
+            />
             <div className="desc__ItemsCart">
               <h1 className="h1__ItemsCart">{item.brand}</h1>
               <p className="nameP__ItemsCart">{item.title}</p>
@@ -53,7 +66,7 @@ function ItemsCart() {
                 <h1 className="h1__ItemsCart">OFERTA DRAGO</h1>
               </div>
             </div>
-        </div>
+          </div>
           <QuantityCart
             quantity={item.quantity}
             price={item.price}
@@ -65,7 +78,6 @@ function ItemsCart() {
         </div>
       ))}
       <div className="line__ItemsCart"></div>
-
     </article>
   );
 }
