@@ -10,7 +10,7 @@ function MainHome() {
         <main>
             <EmblaCarousel />
             <div className="mais__vendidos">PRODUTOS</div>
-            <Products searchProduct="placa mãe b550" />
+            <Products searchProduct="ps5" />
             <BestBrands />
         </main>
     );

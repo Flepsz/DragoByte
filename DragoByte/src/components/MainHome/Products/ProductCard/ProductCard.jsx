@@ -4,11 +4,6 @@ import "./ProductCard.css";
 import formatCurrency from "../../../../utils/formatCurrency";
 
 function ProductCard({ data }) {
-    const [cartItems, setCartItems] = useState(() => {
-        const storedItems = localStorage.getItem("cartItems");
-        return storedItems ? JSON.parse(storedItems) : [];
-    });
-
     function desconto() {
         return Math.floor(Math.random() * (50 - 1)) + 1;
     }
@@ -17,6 +12,8 @@ function ProductCard({ data }) {
     const brand = attributes[1].value_name;
 
     const handleAddToCart = () => {
+        const _cartItems = localStorage.getItem("cartItems") ?? '[]';
+        const cartItems = JSON.parse(_cartItems);
         const existingItem = cartItems.find(
             (cartItem) => cartItem.title === title
         );
@@ -28,7 +25,8 @@ function ProductCard({ data }) {
                 }
                 return cartItem;
             });
-            setCartItems(updatedCartItems);
+
+            localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
         } else {
             const newItem = {
                 title,
@@ -37,14 +35,9 @@ function ProductCard({ data }) {
                 brand,
                 quantity: 1,
             };
-            setCartItems([...cartItems, newItem]);
+            localStorage.setItem("cartItems", JSON.stringify([...cartItems, newItem]));
         }
-        window.location.reload();
     };
-
-    React.useEffect(() => {
-        localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    }, [cartItems]);
 
     return (
         <section className="product__card" key={id}>
