@@ -16,14 +16,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/sobre" element={<Sobre />} />{" "}
-        <Route path="/produtos" element={<Produtos />} />{" "}
-        <Route path="/carrinho" element={<Carrinho />} />{" "}
-        <Route path="/agradecimento" element={<Agradecimento />} />{" "}
-        <Route path="*" element={<NotFound />} />{" "}
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sobre" element={<Sobre />} />{" "}
+          <Route path="/produtos" element={<Produtos />} />{" "}
+          <Route path="/carrinho" element={<Carrinho />} />{" "}
+          <Route path="/agradecimento" element={<Agradecimento />} />{" "}
+          <Route path="*" element={<NotFound />} />{" "}
+        </Routes>
       <Footer />
     </BrowserRouter>
   </React.StrictMode>
